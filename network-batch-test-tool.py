@@ -23,7 +23,7 @@ pdfmetrics.registerFont(TTFont('SimSun',  'simsun.ttc'))
 class WebsiteChecker:
     def __init__(self, master):
         self.master = master
-        master.title("网络技术部业务验证工具v1.2")
+        master.title("网络访问批量测试工具v1.2")
         master.geometry("1000x840")  
         # 获取本机IP地址、网关IP地址并检测网关是否可达
         self.local_ip  = self.get_local_ip()
@@ -31,7 +31,7 @@ class WebsiteChecker:
         self.gateway_reachable  = self.ping_gateway() 
            # 设置标题字体
         title_font = ("SimSun", 15)
-        title_label = tk.Label(master, text="网络技术部业务验证工具v1.2", font=title_font)
+        title_label = tk.Label(master, text="网络访问批量测试工具v1.2", font=title_font)
         title_label.pack(pady=1)  
         
         # 显示本机IP、网关IP和网关可达状态在一行
@@ -39,7 +39,7 @@ class WebsiteChecker:
         self.ip_info_text = ip_info_text
         #ip_label = tk.Label(master, text=ip_info_text)
         #ip_label.pack(pady=1) 
-        self.master.title(f"网络技术部业务验证工具:   {ip_info_text}")
+        self.master.title(f"网络访问批量测试工具:   {ip_info_text}")
 
         self.create_widgets()  
         self.check_queue   = Queue()
